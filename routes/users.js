@@ -55,7 +55,7 @@ router.post(
         },
         (error, token) => {
           if (error) throw error
-          res.send({ token })
+          res.json({ token })
         }
       )
     } catch (error) {

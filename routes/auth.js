@@ -62,11 +62,10 @@ router.post(
         },
         (error, token) => {
           if (error) throw error
-          res.send({ token })
+          res.json({ token })
         }
       )
     } catch (error) {
-      console.error(error.message)
       res.status(500).send({ message: error.message })
     }
   }

@@ -13,7 +13,6 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (currentContact !== null) {
-      console.log(currentContact)
       setContact(currentContact)
     } else {
       setContact({

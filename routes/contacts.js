@@ -44,7 +44,6 @@ router.post(
       const contact = await newContact.save()
       return res.json(contact)
     } catch (error) {
-      console.error(error.message)
       res.status(500).send('Server Error')
     }
   }
@@ -110,7 +109,6 @@ router.delete('/:id', auth, async (req, res) => {
     await Contact.findByIdAndRemove(req.params.id)
     res.json({ message: 'Contact deleted' })
   } catch (error) {
-    console.error(error.message)
     res.status(500).send('Server Error')
   }
 })
